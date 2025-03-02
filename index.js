@@ -1,6 +1,7 @@
 import express from "express";
 import { createServer } from "http";
 import { WebSocketServer } from "ws";
+import watchFiles from "./public/file-watcher.js";
 
 const app = express();
 const port = 3000;
@@ -24,6 +25,8 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.send("Hello world!");
 });
+
+watchFiles();
 
 server.listen(port, () => {
   console.log(`HMR server is listening on port ${port}.`);
