@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 
-watchFiles();
+watchFiles(wss);
 
 server.listen(port, () => {
   console.log(`HMR server is listening on port ${port}.`);
