@@ -7,6 +7,9 @@ socket.onopen = () => {
 
 socket.onmessage = (e) => {
   console.log("Message from server:", e.data);
+  if (e.data.includes("updated")) {
+    location.reload();
+  }
 };
 
 socket.onerror = (error) => {
