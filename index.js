@@ -8,7 +8,7 @@ const port = 3000;
 
 const server = createServer(app);
 
-const wss = new WebSocketServer({ server });
+export const wss = new WebSocketServer({ server });
 
 wss.on("connection", function connection(ws) {
   ws.on("error", console.error);
