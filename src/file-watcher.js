@@ -4,10 +4,10 @@ import path from "path";
 let lastModifiedFiles = {};
 
 export default function watchFiles(ws) {
-  fs.watch("./public", (eventType, fileName) => {
+  fs.watch("../public", (eventType, fileName) => {
     if (!fileName) return;
 
-    const filePath = path.join("public", fileName);
+    const filePath = path.join("../public", fileName);
     fs.readFile(filePath, "utf-8", (err, currentContent) => {
       if (err) {
         console.error("Error reading file:", err);

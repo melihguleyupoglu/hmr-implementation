@@ -1,7 +1,7 @@
 import express from "express";
 import { createServer } from "http";
 import { WebSocketServer } from "ws";
-import watchFiles from "./public/file-watcher.js";
+import watchFiles from "./file-watcher.js";
 
 const app = express();
 const port = 3000;
@@ -20,7 +20,7 @@ wss.on("connection", function connection(ws) {
   ws.send("Hello from WebSocket!");
 });
 
-app.use(express.static("public"));
+app.use(express.static("../public"));
 
 app.get("/", (req, res) => {
   res.send("Hello world!");
