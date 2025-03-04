@@ -13,8 +13,8 @@ This project is a minimal Hot Module Replacement (HMR) system built from scratch
 
 ```sh
 # Clone the repository
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone <hmr-implementation>
+cd <hmr-implementation>
 
 # Install dependencies
 npm install
